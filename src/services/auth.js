@@ -16,17 +16,7 @@ const config = {
     }
 }
 
-let signIn
-
-const iniOktaSignIn = () => {
-    if (signIn === undefined) {
-        signIn = typeof window !== 'undefined' && new OktaSignIn(config)
-    }
-console.log(signIn)
-    return signIn
-}
-
-iniOktaSignIn()
+const signIn = typeof window !== 'undefined' && new OktaSignIn(config)
 
 const signOut = () => {
     signIn.authClient.signOut().catch((error) => {

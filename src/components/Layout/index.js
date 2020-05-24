@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from '../Header/index'
 import Content from '../Content/index'
+import Footer from '../Footer/index'
 import AccountButton from '../AccountButton/index'
 
 export default function Layout({ children, backgroundImageClass }) {
@@ -10,6 +11,7 @@ export default function Layout({ children, backgroundImageClass }) {
       <Content>
         {children}
       </Content>
+      <Footer />
       <AccountButton />
     </div>
   )
