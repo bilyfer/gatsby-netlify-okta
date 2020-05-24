@@ -19,11 +19,7 @@ const config = {
 const signIn = typeof window !== 'undefined' && new OktaSignIn(config)
 
 const signOut = () => {
-    signIn.authClient.signOut().catch((error) => {
-        console.error('Sign out error: ' + error)
-    }).then(() => {
-        navigate('/')
-    })
+    signIn.authClient.signOut()
 }
 
 const getSession = async () => {

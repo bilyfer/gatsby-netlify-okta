@@ -4,10 +4,10 @@ import BlogRoll from "../components/BlogRoll/index"
 
 export default () => {
   if (typeof window !== 'undefined') {
-    const query = window.location.search;
+    const query = window.location.search
 
     if (query.includes('code=') && query.includes('state=')) {
-      window.history.replaceState({}, document.title, '/');
+      window.history.replaceState({}, document.title, '/')
     }
   }
 

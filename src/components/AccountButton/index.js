@@ -53,7 +53,7 @@ export default class AccountButton extends React.Component {
                 break
             case 'signout': {
                 signOut()
-                this.setState({ isAuthenticated: false })
+                navigate('/')
                 break
             }
             default:
