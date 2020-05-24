@@ -236,7 +236,6 @@ a:hover,
 }
 
 /* my custom css */
-
 #account-container {
     right: 0;
     width: 130px;
@@ -272,4 +271,18 @@ a:hover,
 
 .btn.sign-out:hover {
     color: #66d7ff
+}
+
+.dda-container {
+    color: #2ab3e2 !important;
+    box-shadow: none !important;
+}
+
+.dda-container .dda-dropdown-list {
+    border: none !important;
+}
+
+.dda-container.show {
+    top: 30px !important;
+    right: 8px !important;
 }

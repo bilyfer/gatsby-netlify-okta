@@ -1,4 +1,4 @@
-import OktaSignIn from '@okta/okta-signin-widget';
+import OktaSignIn from '@okta/okta-signin-widget'
 import { navigate } from '@reach/router'
 
 const config = {
@@ -14,54 +14,66 @@ const config = {
     features: {
         registration: true,
     }
-};
+}
 
-let signIn;
+let signIn
 
-const getSignInObject = () => {
+const iniOktaSignIn = () => {
     if (signIn === undefined) {
-        signIn = typeof window !== 'undefined' && new OktaSignIn(config);
+        signIn = typeof window !== 'undefined' && new OktaSignIn(config)
     }
+console.log(signIn)
+    return signIn
+}
 
-    return signIn;
-};
-
-getSignInObject();
+iniOktaSignIn()
 
 const signOut = () => {
     signIn.authClient.signOut().catch((error) => {
         console.error('Sign out error: ' + error)
     }).then(() => {
-        navigate('/');
-    });    
+        navigate('/')
+    })
 }
 
 const getSession = async () => {
-    return await signIn.authClient.session.get();
+    return await signIn.authClient.session.get()
 }
 
 const getIdToken = async () => {
-    let idToken;
-    const tokens = await signIn.authClient.token.getWithoutPrompt({
+    let idToken
+    const { tokens } = await signIn.authClient.token.getWithoutPrompt({
         scopes: ['openid', 'email', 'profile'],
     })
 
-    if (tokens && tokens.length > 0) {
-        idToken = tokens.find(token =>  token.idToken !== undefined)
+    if (tokens && tokens.idToken) {
+        idToken = tokens.idToken
     }
 
     return idToken
-};
+}
+
+const getUserName = async () => {
+    let user
+
+    const idToken = await getIdToken()
+    if (idToken) {
+        user = idToken.claims.name
+    }
+
+    return user
+}
 
 const isAuthenticated = async () => {
-    const session = await getSession();
-    return session.status === 'ACTIVE';
-};
+    const session = await getSession()
+    return session.status === 'ACTIVE'
+}
 
 export {
     signIn,
     signOut,
     getIdToken,
+    getUserName,
     getSession,
     isAuthenticated
-};
+}

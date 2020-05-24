@@ -10,7 +10,7 @@ export default function Template({
   const { frontmatter, html } = markdownRemark
 
   return (
-    <Layout>
+    <Layout backgroundImageClass={'blogBg'}>
       <article className="entry-content">
         <BreadCrumbs title={frontmatter.title} />
         <h1>{frontmatter.title}</h1>
@@ -22,7 +22,7 @@ export default function Template({
         <span className="entry-date dashicons-before dashicons-calendar">
           Date:	<span>{frontmatter.date}</span>
         </span>
-      </div>   
+      </div>
     </Layout>
   )
 }

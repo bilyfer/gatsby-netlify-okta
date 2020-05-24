@@ -2,14 +2,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 
-function BreadCrumbs({title}) {
+function BreadCrumbs({ title }) {
     return (
         <nav>
-            <ul className="breadcrumbs">              
+            <ul className="breadcrumbs">
                 <li>
-                    <Link to="/">News</Link>                      
+                    <Link to="/">News</Link>
                 </li>
-				<li>{title}</li>
+                <li>{title}</li>
             </ul>
         </nav>
     )
@@ -17,6 +17,6 @@ function BreadCrumbs({title}) {
 
 BreadCrumbs.propTypes = {
     title: PropTypes.string
-};
+}
 
 export default BreadCrumbs

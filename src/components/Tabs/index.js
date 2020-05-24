@@ -5,14 +5,14 @@ function Tabs() {
     return (
         <ul className="tabs tabs-3">
             <li>
-                <Link 
-                    id="news-tab-a" 
+                <Link
+                    id="news-tab-a"
                     className="tab button news-tab-a active"
                     to="/"
                 >
-                    News        
+                    News
                 </Link>
-            </li>      
+            </li>
         </ul>
     )
 }
