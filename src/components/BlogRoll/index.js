@@ -19,16 +19,22 @@ class BlogRoll extends React.Component {
             <div id="newstab-display">
               <nav className="news-items news-display border-grid">
                 {posts &&
-                  posts.map(({ node: post }) => (
-                    <div key={post.id}>
-                      <Link className="alt" to={post.frontmatter.path}>
+                  posts.map(({ node: post }, index) => {
+                    let altClassName = ''
+
+                    if (index % 4 === 0 || (index - 1) % 4 === 0) {
+                      altClassName = 'alt'
+                    }
+
+                    return (<div key={post.id}>
+                      <Link className={altClassName} to={post.frontmatter.path}>
                         <h4>{post.frontmatter.title}</h4>
                         <span className="dashicons-before dashicons-calendar">
                           {post.frontmatter.date}
                         </span>
                       </Link>
-                    </div>
-                  ))}
+                    </div>)
+                })}
               </nav>
             </div>
           </article>

@@ -10,10 +10,9 @@ export default function Template({
   const { frontmatter, html } = markdownRemark
 
   return (
-    <Layout backgroundImageClass={'blogBg'}>
+    <Layout backgroundImageClass={'blogBg'} headerBottomTitle={frontmatter.title}>
       <article className="entry-content">
         <BreadCrumbs title={frontmatter.title} />
-        <h1>{frontmatter.title}</h1>
         <div
           dangerouslySetInnerHTML={{ __html: html }}
         />
