@@ -1,5 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
+import Layout from "../components/Layout/index"
+import BreadCrumbs from "../components/BreadCrumbs/index"
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
@@ -8,16 +10,20 @@ export default function Template({
   const { frontmatter, html } = markdownRemark
 
   return (
-    <div className="blog-post-container">
-      <div className="blog-post">
+    <Layout>
+      <article className="entry-content">
+        <BreadCrumbs title={frontmatter.title} />
         <h1>{frontmatter.title}</h1>
-        <h2>{frontmatter.date}</h2>
         <div
-          className="blog-post-content"
           dangerouslySetInnerHTML={{ __html: html }}
         />
-      </div>
-    </div>
+      </article>
+      <div className="entry-meta">
+        <span className="entry-date dashicons-before dashicons-calendar">
+          Date:	<span>{frontmatter.date}</span>
+        </span>
+      </div>   
+    </Layout>
   )
 }
 

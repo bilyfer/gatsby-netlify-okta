@@ -1,0 +1,275 @@
+#masthead.bg-method #logo {
+    background-image: url(https://www.universalmusic.com/wp-content/themes/umgcore2/assets/img/logo.png);
+}
+#slider-cover {
+    background-image: url(https://www.universalmusic.com/wp-content/themes/umgcore2/assets/img/logo.png);
+}
+.hero-titles h1 {
+    font-style: italic;
+}
+#slides h2 {
+    font-style: italic;
+}
+.off-canvas.with-cover cover {
+    opacity: 0.7;
+}
+body {
+    font-size: 100%;
+}
+body.small-screen-font {
+    font-size: 90%;
+}
+#masthead {
+    background-color: rgba(0, 0, 0, 0);
+}
+.masthead-fixed #masthead {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.slider-loaded #masthead {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.footer-tiles img {
+    opacity: 0.8;
+}
+.footer-tiles a:hover img {
+    opacity: 0.6;
+}
+.single-label .hero-inner h1 span {
+    background-color: rgba(0, 0, 0, 1);
+}
+.single-label .hero-inner h1 span {
+    box-shadow: 0 0 2px 2px 1;
+}
+.single-post .hero-inner {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+#slides h2,
+#slides h3 {
+    text-shadow: 2px 2px 3px #000000;
+}
+body.search li.result-cell.visible {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+html,
+body {
+    font-family: Lato, "Helvetica Neue", sans-serif;
+}
+body,
+header,
+#main,
+.off-canvas {
+    font-family: Glegoo, "Josefin Sans", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Glegoo, "Josefin Sans", sans-serif;
+}
+#hero h1,
+#slides h2 {
+    font-family: Lato, "Josefin Sans", sans-serif;
+}
+#hero h2,
+#slides h3,
+.single-label #hero h1 {
+    font-family: Glegoo, sans-serif;
+}
+#main-menu li {
+    font-family: Glegoo, sans-serif;
+}
+form,
+label,
+textarea,
+input,
+select,
+.aside .button,
+.main-menu-footer {
+    font-family: Lato, sans-serif;
+}
+.main-menu-footer,
+#footer-buttons li,
+.footer-base {
+    font-family: "PT Sans Narrow", "Helvetica Neue", Lato, sans-serif;
+}
+.small-line-before,
+#content,
+.primary,
+#main .border,
+#main .border-1,
+#main .border-2,
+#main .border-3,
+#main .border-grid,
+#main .border-grid div,
+#main hr {
+    border-color: #d0d0d0;
+}
+nav#main-menu li::before {
+    border-color: #1b1b1b;
+}
+.slimScrollBar {
+    background-color: #999999 !important;
+}
+#hero H1,
+#slides H2 {
+    color: #2ab3e2;
+}
+#hero H2,
+#slides H3 {
+    color: #ffffff;
+}
+html,
+#hero,
+#footer,
+.bg-dark,
+.off-canvas {
+    background-color: #000000;
+}
+.e404::before,
+#main a,
+.summary-title,
+nav .current,
+nav li:last-child {
+    color: #2ab3e2;
+}
+body a,
+.bg-dark a {
+    color: #c0c0c0;
+}
+.posts-navigation .current,
+.off-canvas .the-form {
+    border-color: #2ab3e2;
+}
+body,
+.bg-dark,
+.silver,
+#main .tiles .cover + a h4,
+#main .tiles .cover + a,
+.search-box * {
+    color: #c0c0c0;
+}
+.off-canvas a,
+.footer-tiles a,
+.buttons-dark .button,
+form input[type="submit"],
+form input[type="button"],
+.search-box *:focus,
+.search-box *:hover,
+#main .tiles .cover + a:hover,
+#main .tiles .cover + a:hover h4,
+#main a.silver:hover {
+    color: #ffffff;
+}
+.toggle,
+.tiles .cover,
+.tiles li:hover,
+.buttons-light .button,
+.buttons-dark .button:hover,
+form input[type="submit"],
+form input[type="button"] {
+    background-color: #2ab3e2;
+}
+.tiles .cover + a:hover {
+    border-color: #2ab3e2;
+}
+#footer,
+.off-canvas,
+.bg-dark,
+.search-results #main,
+.search-results,
+.button.tab,
+.buttons-dark .button {
+    background-color: #000000;
+}
+a:hover,
+.off-canvas a:hover,
+.footer-buttons a:hover {
+    color: #66d7ff;
+}
+.button.tab:hover,
+.slimScrollBar:hover,
+.close.button:hover,
+.toggle .button:hover {
+    background-color: #66d7ff;
+}
+.silver:hover,
+#main .button.tab,
+#main .button.tab:hover,
+#main .buttons-dark .button,
+#main .buttons-dark .button:hover {
+    color: #ffffff;
+}
+.button.tab.active,
+#main .buttons-dark .active .button:hover,
+#main .buttons-dark .active .button,
+#main {
+    background-color: #ffffff;
+}
+#main .button.tab.active,
+#main .button.tab.active:hover,
+.buttons-light .button,
+.toggle .button {
+    color: #000000;
+}
+#news-tab a,
+#main nav,
+#main nav a,
+.off-canvas .date {
+    color: #999999;
+}
+#main nav a:hover {
+    color: #000000;
+}
+#main {
+    color: #4a4a4a;
+}
+@media (max-width:570px) {
+    body {
+        font-size: 90%;
+    }
+}
+#footer-buttons {
+    width: 295px;
+    left: calc(50% - 147.5px);
+}
+
+/* my custom css */
+
+#account-container {
+    right: 0;
+    width: 130px;
+    height: 38px;
+    position: fixed;
+    top: 30px;
+    background-color: #000000;
+    color: #fff;
+    font-size: 1.15em;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px;
+    z-index: 50;
+}
+
+#okta-sign-in .auth-org-logo {
+    max-width: 150px !important;
+    max-height: 100% !important;
+}
+
+.account-nav-container {
+    text-align: center;
+}
+
+.btn.sign-out {
+    cursor: pointer;
+    font-size: 1.15em;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: Glegoo, "Josefin Sans", sans-serif;
+    margin-top: -10px;
+}
+
+.btn.sign-out:hover {
+    color: #66d7ff
+}
