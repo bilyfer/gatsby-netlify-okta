@@ -1,7 +1,8 @@
-import React from "react"
-import { graphql } from "gatsby"
-import Layout from "../components/Layout/index"
-import BreadCrumbs from "../components/BreadCrumbs/index"
+import React from 'react'
+import { graphql } from 'gatsby'
+import Layout from '../components/Layout/index'
+import BreadCrumbs from '../components/BreadCrumbs/index'
+import Context from './context'
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
@@ -10,19 +11,24 @@ export default function Template({
   const { frontmatter, html } = markdownRemark
 
   return (
-    <Layout backgroundImageClass={'blogBg'} headerBottomTitle={frontmatter.title}>
-      <article className="entry-content">
-        <BreadCrumbs title={frontmatter.title} />
-        <div
-          dangerouslySetInnerHTML={{ __html: html }}
-        />
-      </article>
-      <div className="entry-meta">
-        <span className="entry-date dashicons-before dashicons-calendar">
-          Date:	<span>{frontmatter.date}</span>
-        </span>
-      </div>
-    </Layout>
+    <Context.Provider value={{
+      backgroundImageClass: 'blogBg',
+      headerBottomTitle: frontmatter.title
+    }}>
+      <Layout>
+        <article className="entry-content">
+          <BreadCrumbs title={frontmatter.title} />
+          <div
+            dangerouslySetInnerHTML={{ __html: html }}
+          />
+        </article>
+        <div className="entry-meta">
+          <span className="entry-date dashicons-before dashicons-calendar">
+            Date:	<span>{frontmatter.date}</span>
+          </span>
+        </div>
+      </Layout>
+    </Context.Provider>
   )
 }
 

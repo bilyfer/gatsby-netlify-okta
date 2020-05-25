@@ -1,5 +1,6 @@
-import '@okta/okta-signin-widget/dist/css/okta-sign-in.min.css'
 import React from 'react'
+import { Link } from 'gatsby'
+import '@okta/okta-signin-widget/dist/css/okta-sign-in.min.css'
 import { signIn, getSession } from '../../services/auth'
 
 export default class Login extends React.Component {
@@ -27,7 +28,7 @@ export default class Login extends React.Component {
                 {
                     this.state.showReturnLink &&
                     <div className="account-nav-container">
-                        <a href="/">Go Back to Home Page</a>
+                        <Link to="/">Go Back to Home Page</Link>
                     </div>
                 }
             </>

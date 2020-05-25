@@ -1,5 +1,4 @@
 import OktaSignIn from '@okta/okta-signin-widget'
-import { navigate } from '@reach/router'
 
 const config = {
     baseUrl: 'https://dev-629374.okta.com',

@@ -5,7 +5,7 @@ import { ActionItem, DropDownMenu, DropDownDirection } from 'react-dropdown-adva
 import 'react-dropdown-advanced/styles/rdropdown.css'
 import { isAuthenticated, getUserName, signOut } from '../../services/auth'
 import { getNameInitials } from '../../utils/index'
-import styles from "./content.module.css"
+import styles from './content.module.css'
 
 export default class AccountButton extends React.Component {
     state = {
@@ -39,8 +39,8 @@ export default class AccountButton extends React.Component {
     }
 
     addDropDownItems = () => {
-        const profileItem = new ActionItem("profile", "Profile", "fa-user-o")
-        const signOutItem = new ActionItem("signout", "Sign Out", "fa-download")
+        const profileItem = new ActionItem('profile', 'Profile', 'fa-user-o')
+        const signOutItem = new ActionItem('signout', 'Sign Out', 'fa-download')
 
         this.state.fixedItems.push(profileItem, signOutItem)
         this.setState({ fixedItems: this.state.fixedItems })

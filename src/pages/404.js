@@ -8,6 +8,8 @@ export default () => {
     <Layout>
       <BreadCrumbs title="404" />
       <h1>404 Page Not Found</h1>
-      <p><Link to="/">Return to Home</Link></p>
+      <p>
+        <Link to="/">Return to Home</Link>
+      </p>
     </Layout>)
 }

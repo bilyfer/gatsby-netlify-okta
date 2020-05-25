@@ -1,9 +1,11 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import Logo from "./logo"
-import styles from "./content.module.css"
+import Logo from './logo'
+import styles from './content.module.css'
+import Context from '../../templates/context'
 
-function Header({ backgroundImageClass, headerBottomTitle }) {
+function Header() {
+  const { backgroundImageClass, headerBottomTitle } = React.useContext(Context)
+
   return (
     <>
       <Logo />
@@ -35,8 +37,5 @@ function Header({ backgroundImageClass, headerBottomTitle }) {
   )
 }
 
-Header.propTypes = {
-  backgroundImageClass: PropTypes.string
-}
 
 export default Header

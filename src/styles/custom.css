@@ -284,5 +284,5 @@ a:hover,
 
 .dda-container.show {
     top: 30px !important;
-    right: 8px !important;
+    right: -10px !important;
 }
